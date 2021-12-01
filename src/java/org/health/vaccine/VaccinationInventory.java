@@ -12,6 +12,7 @@ public class VaccinationInventory {
     public int vaccineId;
     public int totalNumber;
     public String type;
+    public String status;
     
 //    public int getvaccineId(){
 //        return this.vaccineId;
@@ -40,10 +41,10 @@ public class VaccinationInventory {
        return "INSERT INTO `vaccines` (`vaccineId`, `totalNumber`, `type`, `status`) VALUES (NULL, '10', '"+totalNumber+"', '"+type+"');";
     }
     
-    public String returnVaccineStatus(int Id){
-        //SELECT `s` FROM `vaccines` WHERE 1
-        return "SELECT status FROM `vaccines` WHERE '"+id+"'";
-    }
+//    public String returnVaccineStatus(int Id){
+//        //SELECT `s` FROM `vaccines` WHERE 1
+//        return "SELECT status FROM `vaccines` WHERE '"+id+"'";
+//    }
     
     
     public String getReports(){

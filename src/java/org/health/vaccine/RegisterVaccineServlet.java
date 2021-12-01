@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package org.health.administration;
+package org.health.vaccine;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author user
  */
-public class LoginServlet extends HttpServlet {
+public class RegisterVaccineServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,23 +35,24 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            
-            //getParamaters
-            String email =  request.getParameter("email");
-            String password =  request.getParameter("password");
-            request.setAttribute("email", email);
-            request.setAttribute("password", password);
-             RequestDispatcher rd = request.getRequestDispatcher("LoginUser.jsp");    
-   
-            rd.forward(request, response);//method may be include or forward  
-            
-            //out.println("The email is " +name);
-            out.println("<h1>Forwarded Request</h1>");
-                    
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet RegisterVaccineServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+
+  
+            boolean redirect  = Boolean.parseBoolean(request.getParameter("redirect"));
+            if(redirect){
+                                         //getParamaters
+            String name =  request.getParameter("name");
+            String quantity =  request.getParameter("quantity");
+            }
+            else{
+                   RequestDispatcher rd = request.getRequestDispatcher("RegisterVaccine.jsp");    
+            rd.forward(request, response);
+            }
+            
+            request.setAttribute("name", name);
+            request.setAttribute("quantity", quantity);
             out.println("</body>");
             out.println("</html>");
         }

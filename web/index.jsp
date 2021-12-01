@@ -30,7 +30,7 @@
     </style>
     <body style="background-image: url(https://blog.scopus.com/sites/default/files/coronavirus-image-iStock-628925532-full-width-wide_0.jpg);
   background-repeat: no-repeat;
-  background-size: 1440px 100vh;">
+  background-size: 100% 100vh;">
     <div style="display: grid; place-items: center; margin:50px;  ;padding: 20px; border-radius: 10px;">
         <div  style="display: flex;align-items: center; justify-content: center; margin:10px;color: #fff; ">
             <h1 style="align-items: center;">Welcome To the Covid Track Management System</h1>
@@ -38,6 +38,11 @@
 
         <form action="LoginServlet" style="width: 40%; background-color: white;border: 1px solid whitesmoke; padding: 10px;box-shadow: 
         rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 10px;">
+            
+            <a href="PatientAdmin">Patient Dashboard</a>
+            <a href="SystemAdministratorServlet">System Administrator Servlet</a>
+             <a href="HealthAdministrator">Health Administrator Dashboard</a>
+            
         <div style="display: flex;align-items: center; justify-content: center;">
             <h5 style="align-items: center;">Login</h5>
         </div>
@@ -49,7 +54,7 @@
 
               <div class="m-3">
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="email" class="form-control m-2" name="password">
+                <input type="passsword" class="form-control m-2" name="password">
               </div>
 
               <div class="m-3 "  style="margin:20px 0;">

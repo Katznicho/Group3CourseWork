@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author user
  */
-public class LoginServlet extends HttpServlet {
+public class PatientAdmin extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,23 +35,13 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            
-            //getParamaters
-            String email =  request.getParameter("email");
-            String password =  request.getParameter("password");
-            request.setAttribute("email", email);
-            request.setAttribute("password", password);
-             RequestDispatcher rd = request.getRequestDispatcher("LoginUser.jsp");    
-   
-            rd.forward(request, response);//method may be include or forward  
-            
-            //out.println("The email is " +name);
-            out.println("<h1>Forwarded Request</h1>");
-                    
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet PatientAdmin</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+                    RequestDispatcher rd = request.getRequestDispatcher("Patient.jsp");    
+   
+            rd.forward(request, response);//method may be include or forward  
+            out.println("<h1>Servlet PatientAdmin at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

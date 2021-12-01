@@ -44,10 +44,11 @@ public class LoginUserHandler extends SimpleTagSupport {
             //
             // out.println("<strong>" + attribute_1 + "</strong>");
             // out.println("    <blockquote>");
-//                           out.println("Here  " +email + "passwprd" +password);
-                                Statement St = newConn.createStatement();
-                         ResultSet user =  St.executeQuery("SELECT * FROM `administrator`");
-                         out.println("Am Done");
+
+//                                Statement St = newConn.createStatement();
+//                         ResultSet rs =  St.executeQuery("select * from administrator");
+                         
+                         out.println("<h2>Am here</h1>");
 //                         if(user.getString("email").equalsIgnoreCase(email) && user.getString("password") == password){
 //                             out.println("clear");
 //                             
