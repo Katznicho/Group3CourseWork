@@ -46,7 +46,7 @@ public class LoginUserHandler extends SimpleTagSupport {
             // out.println("    <blockquote>");
 //                           out.println("Here  " +email + "passwprd" +password);
                                 Statement St = newConn.createStatement();
-                         ResultSet user =  St.executeQuery(Sys.SelectUser(email, password));
+                         ResultSet user =  St.executeQuery("SELECT * FROM `administrator`");
                          out.println("Am Done");
 //                         if(user.getString("email").equalsIgnoreCase(email) && user.getString("password") == password){
 //                             out.println("clear");
