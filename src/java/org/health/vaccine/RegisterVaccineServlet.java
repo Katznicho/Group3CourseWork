@@ -45,14 +45,18 @@ public class RegisterVaccineServlet extends HttpServlet {
                                          //getParamaters
             String name =  request.getParameter("name");
             String quantity =  request.getParameter("quantity");
+            
+            request.setAttribute("type", name);
+            request.setAttribute("totalNumber", quantity);
+            request.setAttribute("registerVaccine", true);
+                RequestDispatcher rd = request.getRequestDispatcher("AddVaccineToDb.jsp");    
+            rd.forward(request, response);
             }
             else{
-                   RequestDispatcher rd = request.getRequestDispatcher("RegisterVaccine.jsp");    
+              RequestDispatcher rd = request.getRequestDispatcher("RegisterVaccine.jsp");    
             rd.forward(request, response);
             }
             
-            request.setAttribute("name", name);
-            request.setAttribute("quantity", quantity);
             out.println("</body>");
             out.println("</html>");
         }

@@ -40,12 +40,30 @@
         rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 10px;">
             
             <a href="PatientAdmin">Patient Dashboard</a>
-            <a href="SystemAdministratorServlet">System Administrator Servlet</a>
-             <a href="HealthAdministrator">Health Administrator Dashboard</a>
+<!--            <a href="SystemAdministratorServlet">System Administrator Servlet</a>
+             <a href="HealthAdministrator">Health Administrator Dashboard</a>-->
             
         <div style="display: flex;align-items: center; justify-content: center;">
             <h5 style="align-items: center;">Login</h5>
+            <br/>
         </div>
+<div style="display: flex;align-items: center; justify-content: center;">
+                <%  
+                  boolean bool =  Boolean.parseBoolean(request.getParameter("invalid"));
+                  if(!bool){
+                      session.removeAttribute("invalid");
+                  }
+                  else{
+                        String invalid = (String)session.getAttribute("invalid"); 
+                       
+
+                         out.print("<br/><small style='color:red'>Invalid Credentials</small>");  
+                  }
+
+                    
+  
+%>  
+</div>
 
             <div class="m-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>

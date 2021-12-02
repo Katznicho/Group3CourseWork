@@ -5,11 +5,11 @@
 package org.health.administration;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.sql.ResultSet;
+//import java.sql.SQLException;
+//import java.sql.Statement;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.JspFragment;
@@ -25,9 +25,9 @@ public class LoginUserHandler extends SimpleTagSupport {
     private String email;
     private String password;
     
-            DBConnection Conn = new DBConnection();
-         Connection newConn  = Conn.getConnection();
-         SystemAdminstrationModule Sys =  new SystemAdminstrationModule();
+//            DBConnection Conn = new DBConnection();
+//         Connection newConn  = Conn.getConnection();
+//         SystemAdminstrationModule Sys =  new SystemAdminstrationModule();
 
     /**
      * Called by the container to invoke this tag. The implementation of this
@@ -48,7 +48,7 @@ public class LoginUserHandler extends SimpleTagSupport {
 //                                Statement St = newConn.createStatement();
 //                         ResultSet rs =  St.executeQuery("select * from administrator");
                          
-                         out.println("<h2>Am here</h1>");
+                         out.println("<h2>Your "+email+" and pass "+password+"</h1>");
 //                         if(user.getString("email").equalsIgnoreCase(email) && user.getString("password") == password){
 //                             out.println("clear");
 //                             
@@ -68,8 +68,6 @@ public class LoginUserHandler extends SimpleTagSupport {
             // out.println("    </blockquote>");
         } catch (java.io.IOException ex) {
             throw new JspException("Error in LoginUserHandler tag", ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(LoginUserHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

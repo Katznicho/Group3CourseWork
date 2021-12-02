@@ -32,9 +32,37 @@
 
 <!-- Page Content -->
 <div style="margin-left:25%">
+    
+    
 
 <div class="w3-container w3-teal">
-  <h1>My Page</h1>
+    <style>
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+        
+    </style>
+    <div class="header">
+        <h1>
+        <%   
+  String name = (String)session.getAttribute("name"); 
+
+out.print("Welcome "+name);  
+  
+ 
+  
+
+  
+%>  
+    </h1>
+    
+    <h3>LogOut</h3>
+    
+        
+    </div>
+    
 </div>
 
 <div class="w3-container">

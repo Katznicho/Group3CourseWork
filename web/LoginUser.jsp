@@ -13,12 +13,17 @@
     </head>
     <body>
 
+          <%
+              String email = request.getParameter("email"); 
+              String password = request.getParameter("password"); 
 
-          <% String email = request.getParameter("email"); %>
-           <% String password = request.getParameter("password"); %>
+//                out.println(email);
+//                out.println(password);
+          %>
            
         <%@ taglib uri="/WEB-INF/tlds/LoginUserTld" prefix="Login" %>
-        <Login:LoginUserHandler email="${email}" password="${password}"></Login:LoginUserHandler>
+        
+        <Login:LoginUserHandler email="${email}" password="${password}"/>
        
 
     </body>
